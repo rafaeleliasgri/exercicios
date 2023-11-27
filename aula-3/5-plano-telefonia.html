@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Plano de Telefonia</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Plano de Telefonia</h1>
+
+            <p>informe a quantidade de minutos utilizada para cálculo</p>
+
+            <label for="txt1">Quantidade de minutos:</label>
+
+            <input type="text" id="minutos">
+            
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+            var caixaTexto1 = document.getElementById("minutos").value;
+          
+            var minutosConsumidos = parseFloat(caixaTexto1);
+
+            var minutosPlano = 100;
+
+            var valorPlano = 50;
+
+            var valorMinutoExcedido = 2;
+
+            var valorTotal;        
+
+            if (minutosConsumidos > minutosPlano) {
+                var minutosExcedentes = minutosConsumidos - minutosPlano;
+
+                var valorExcedente = minutosExcedentes * valorMinutoExcedido;
+
+                valorTotal = valorPlano + valorExcedente;
+            }
+            else {
+                valorTotal = valorPlano
+            }
+            alert("O valor da sua fatura será de R$ " + valorTotal.toFixed(2).replace('.',","));
+
+        }
+
+    </script>
+
+</body>
+</html>

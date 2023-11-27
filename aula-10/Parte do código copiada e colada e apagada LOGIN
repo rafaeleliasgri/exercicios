@@ -1,0 +1,37 @@
+            result.Mensagem = "ERRO! Não foi possível efetuar o Login. Contate o administrador";
+            
+            
+                 var loginresult = JSON.parse(this.responseText);
+
+                if (loginresult.Sucesso) {
+                    alert("Você Logou com Sucesso!!!");
+                }
+                else {
+                    exibirMensagemErro(loginresult.Mensagem);
+                    
+                    
+                    
+            result.Sucesso = false;
+            result.Mensagem = "ERRO! Não foi possível efetuar o Login. Contate o administrador";
+            
+                        result.Sucesso = false;
+            result.Mensagem = "ERRO! Não foi possível cadastrar. Contate o administrador";
+            
+            
+                        result.Sucesso = false;
+            result.Mensagem = "ERRO! Não foi possível enviar o e-mail de redefinição de senha. Contate o administrador";
+            
+$ sudo mysql
+ALTER USER 'rafaeleliasgri'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Acerola1983@';
+mysql > exit
+
+
+rafaeleliasgri'@'localhost
+
+
+mysql -u root -p
+ALTER USER 'rafaeleliasgri'@'localhost' IDENTIFIED WITH auth_socket;
+
+
+
+

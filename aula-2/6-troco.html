@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>TROCO</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>TROCO</h1>
+
+            <p>Informe os dados abaixo para calcular o valor do troco a ser devolvido ao cliente</p>
+
+            <label for="txt1">Informe a quantidade de produtos:</label>
+           
+            <input type="text" id="qtdProduto">
+
+            <label for="txt2">Informe o valor unitário R$:</label>
+
+            <input type="text" id="valUnit">
+
+            <label for="txt3">Informe o valor dado pelo cliente R$:</label>
+
+            <input type="text" id="valCliente">
+
+            <button onclick="botao_click()">Calcular o Troco</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var caixaTexto1 = document.getElementById("qtdProduto").value;
+
+            var caixaTexto2 = document.getElementById("valUnit").value;
+            
+            var caixaTexto3 = document.getElementById("valCliente").value;
+            
+            var numero1 = parseFloat(caixaTexto1);
+
+            var numero2 = parseFloat(caixaTexto2);
+
+            var numero3 = parseFloat(caixaTexto3);
+
+            var troco = numero3 - (numero1 * numero2);
+            
+            var mensagem1 = "O troco a ser devolvido ao cliente é R$ " + troco;
+
+            alert(mensagem1);
+
+        }
+
+    </script>
+
+</body>
+</html>

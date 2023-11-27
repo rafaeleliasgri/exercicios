@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Números Negativos</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Números Negativos</h1>
+
+            <label for="txt1">Digite a quantidade de números:</label>
+
+            <input type="number" id="qtdeNumeros">
+
+            <label for="txt2">Digite cada número:</label>
+
+            <input type="number" id="numeroDigitado">
+
+            <button onclick="botao_click()">Armazenar</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        var numeros = [];
+
+        var numerosNegativos = [];
+
+        function botao_click() {
+
+            var quantidadeNumeros = parseInt(document.getElementById("qtdeNumeros").value);
+
+            var txtNumero = document.getElementById("numeroDigitado");
+
+            if (numeros.length < quantidadeNumeros) {
+
+                var numeroDigi = parseInt(document.getElementById("numeroDigitado").value);
+
+                numeros.push(numeroDigi);
+
+                txtNumero.value = "";
+
+                txtNumero.focus();
+            }
+
+            if (numeros.length == quantidadeNumeros) {
+
+                for (var i = 0; i <= numeros.length; i++) {
+
+                    var numerosNeg = numeros[i];
+
+                    if (numerosNeg < 0) {
+
+                        numerosNegativos.push(numerosNeg);
+
+                    }
+
+                }
+                
+                alert("Os números negativos são: " + numerosNegativos.toString());
+
+                numeros = [];
+                numerosNegativos = [];
+                numeroDigitado.value = "";
+                qtdeNumeros.value = "";
+                qtdeNumeros.focus();
+
+
+            }
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

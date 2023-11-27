@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Quantidade de Glicose no seu sangue</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Quantidade de Glicose no seu sangue</h1>
+
+            <p>informe o nível de glicose em seu sangue de acordo com o resultado da analise clínica</p>
+
+            <label for="txt1">glicose (mg/dl):</label>
+
+            <input type="text" id="glicose">
+            
+            <button onclick="botao_click()">Verificar</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+            var caixaTexto1 = document.getElementById("glicose").value;
+          
+            var glicose = parseFloat(caixaTexto1);
+
+            var normal = 100;
+
+            var limitrofe = 140;
+
+            if (glicose <= normal) {
+                alert("Seu nível de glicose está NORMAL");
+            }
+            else if (normal < glicose && glicose <= limitrofe) {
+                alert("Seu nível de glicose está ELEVADO - PROCURE UM MÉDICO");
+            }
+            else if (glicose > limitrofe) {
+                alert("Seu nível de glicose é de DIABETES - PROCURE UM MÉDICO");
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Media Final Aprovação/Reprovação</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Media Final Aprovação/Reprovação</h1>
+
+            <p>Informe as notas no primeiro e segundo semestres para cálculo</p>
+
+            <label for="txt1">Nota primeiro semestre:</label>
+
+            <input type="text" id="nota1">
+
+            <label for="txt2">Nota segundo semestre:</label>
+           
+            <input type="text" id="nota2">
+            
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+            var caixaTexto1 = document.getElementById("nota1").value;
+
+            var caixaTexto2 = document.getElementById("nota2").value;
+           
+            var numero1 = parseFloat(caixaTexto1);
+
+            var numero2 = parseFloat(caixaTexto2);
+
+            var media = (numero1 + numero2) / 2;
+
+            if (media < 6) {
+                alert("Sua média é " + media + " e você está REPROVADO.");
+            }
+            else {
+                alert("Sua média é " + media + " e você está APROVADO! Parabéns!");
+            }
+        }
+
+    </script>
+
+</body>
+</html>

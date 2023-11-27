@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>PAGAMENTO FUNCIONÁRIO</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>PAGAMENTO FUNCIONÁRIO</h1>
+
+            <p>Informe os dados abaixo para calcular o valor do pagamento do funcionário</p>
+
+            <label for="txt1">Informe o nome do funcionário:</label>
+           
+            <input type="text" id="nomeFuncionario">
+
+            <label for="txt2">Informe a quantidade de horas trabalhadas pelo funcionário:</label>
+
+            <input type="text" id="qdtHoras">
+
+            <label for="txt3">Informe o valor da hora trabalhada R$:</label>
+
+            <input type="text" id="valorHora">
+
+            <button onclick="botao_click()">Calcular o Pagamento</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var caixaTexto1 = document.getElementById("nomeFuncionario").value;
+
+            var caixaTexto2 = document.getElementById("qdtHoras").value;
+            
+            var caixaTexto3 = document.getElementById("valorHora").value;
+            
+            var numero2 = parseFloat(caixaTexto2);
+
+            var numero3 = parseFloat(caixaTexto3);
+
+            var salario = numero2 * numero3;
+            
+            var mensagem1 = "O pagamento do funcionário " + caixaTexto1 + " deverá ser de R$ " + salario;
+
+            alert(mensagem1);
+
+        }
+
+    </script>
+
+</body>
+</html>

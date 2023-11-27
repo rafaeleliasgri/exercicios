@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Olá Mundo While</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Olá Mundo While</h1>
+
+            <p>Digite a quantidade de vezes que você deseja receber a mensagem Olá Mundo!</p>
+
+            <label for="txt1">Digite a quantidade:</label>
+            
+            <input type="number" id="quantidade">
+
+            <button onclick="botao_click()">Receber Mensagens</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+            var caixaTexto1 = document.getElementById("quantidade").value;
+          
+            var quantidade = parseFloat(caixaTexto1);
+
+            while(quantidade > 0) {
+                alert("Olá Mundo");
+
+                quantidade = quantidade - 1;
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

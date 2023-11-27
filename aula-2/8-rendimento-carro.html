@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>RENDIMENTO VEÍCULO</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>RENDIMENTO VEÍCULO</h1>
+
+            <p>Informe os dados abaixo para calcular o rendimento do veículo em km/L</p>
+
+            <label for="txt1">Informe a marca do veículo:</label>
+
+            <input type="text" id="marcaVeiculo">
+
+            <label for="txt2">Informe distância percorrida (km):</label>
+           
+            <input type="text" id="distPercorrida">
+
+            <label for="txt3">Informe a quantidade total de combustível gasto (Litros):</label>
+
+            <input type="text" id="qtdLitros">
+            
+            <button onclick="botao_click()">Calcular o rendimento (km/L)</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var caixaTexto1 = document.getElementById("marcaVeiculo").value;
+
+            var caixaTexto2 = document.getElementById("distPercorrida").value;
+            
+            var caixaTexto3 = document.getElementById("qtdLitros").value;
+            
+            var numero2 = parseFloat(caixaTexto2);
+
+            var numero3 = parseFloat(caixaTexto3);
+
+            var rendimento = numero2 / numero3;
+            
+            var mensagem1 = "O veículo marca " + caixaTexto1 + " percorre em média " + rendimento + " km/L";
+
+            alert(mensagem1);
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Mostrar Ímpares entre dois números</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Mostrar Ímpares entre dois números</h1>
+
+            <p>Digite os números e clique no botão para obter os ímpares entre eles</p>
+
+            <label for="txt1">Número Inicial</label>
+
+            <input type="text" id="inicial">
+
+            <label for="txt1">Número final</label>
+
+            <input type="text" id="final">
+
+
+            <button onclick="botao_click()">Obter</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var caixaTexto1 = document.getElementById("inicial").value;
+
+            var caixaTexto2 = document.getElementById("final").value;
+
+            var numeroInicial = parseFloat(caixaTexto1);
+
+            var numeroFinal = parseFloat(caixaTexto2);
+
+            var mensagem = "Os números ímpares são: " + "\r";
+
+            for (var i = numeroInicial; i <= numeroFinal; i++) {
+
+                var resto = i % 2;
+
+                if (resto > 0) {
+                    // para ver se é ímpar
+
+                    var imparAtual = i + "\r";
+
+                    mensagem = mensagem + imparAtual;
+
+                }
+            }
+            alert(mensagem);
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+#txtNome {
+    background: rgb(101, 101, 102);
+}
+
+/* Neste abaixo pegou as listas dentro do ul e aplicou a formatação*/
+ul li {
+    font-size: 25px;
+}
+
+/* Neste abaixo, pegou o id txt2 dentro do form e aplico a formatação */
+form #txt2 {
+    background: green;
+}
+
+/* Neste abaixo, pegou todos os que são do tipo texto e aplica a formatação */
+form input[type="text"] {
+    height: 35px;
+}

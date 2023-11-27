@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Maior, Menor e Média</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Maior, Menor e Média</h1>
+
+            <label for="txtQuantidadeNumeros">Digite a Quantidade de Números:</label>
+
+            <input type="text" id="txtQuantidadeNumeros">
+
+            <label for="txtNumero">Digite o número</label>
+
+            <input type="number" id="txtNumero" />
+
+            <button onclick="botao_click()">Exibir Cliente</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var numeros = [];
+            var qtdeNumeros = parseInt(document.getElementById('txtQuantidadeNumeros').value);
+
+            if (numeros.length < qtdeNumeros) {
+
+                var numeroDigitado = parseInt(document.getElementById('txtNumero').value);
+
+                numeros.push(numeroDigitado);
+
+                document.getElementById('txtNumero').value = '';
+
+                document.getElementById('txtNumero').focus();
+
+
+            }
+            if (numeros.length == qtdeNumeros) {
+
+                var maiorNumero;
+
+                var menorNumero;
+
+                var media;
+
+                for (var i = 0; i < numeros.length; i++) {
+
+                    var numero = numeros[i];
+
+                    if (numero > maiorNumero) {
+                        maiorNumero = numero;
+
+                        if (numero < menorNumero) {
+                            menorNumero = numero;
+
+                }
+                    }
+                    alert('O menor número é' + menorNumero + 'o maior número é' + maiorNumero);
+
+                }
+
+
+
+
+    </script>
+
+</body>
+</html>

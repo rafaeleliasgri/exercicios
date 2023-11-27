@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>VALOR TERRENO</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>VALOR TERRENO</h1>
+
+            <p>Informe os dados abaixo para calcular o valor do seu terreno</p>
+
+            <label for="txt1">Informe o comprimento em metros:</label>
+           
+            <input type="text" id="comprimento">
+
+            <label for="txt2">Informe a largura em metros:</label>
+
+            <input type="text" id="largura">
+
+            <label for="txt3">Informe o valor do metro quadrado:</label>
+
+            <input type="text" id="mQuadrado">
+
+            <button onclick="botao_click()">Calcular Área e Valor Do Terreno</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var caixaTexto1 = document.getElementById("comprimento").value;
+
+            var numero1 = parseFloat(caixaTexto1);
+
+            var caixaTexto2 = document.getElementById("largura").value;
+
+            var numero2 = parseFloat(caixaTexto2);
+
+            var caixaTexto3 = document.getElementById("mQuadrado").value;
+
+            var numero3 = parseFloat(caixaTexto3);
+
+            var MQuad = numero1 * numero2;
+            
+            var mensagem1 = "A área do terreno é " + MQuad + " metros quadrados";
+
+            alert(mensagem1);
+
+            var valTerreno = numero1 * numero2 * numero3;
+
+            var mensagem2 = "O valor do Terreno é R$ " + valTerreno;
+
+            alert(mensagem2);
+
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>

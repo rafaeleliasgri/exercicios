@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Mostrar Números Primos anteriores a um número</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Mostrar Números Primos anteriores a um número</h1>
+
+            <p>Digite o número e clique no botão para obter os primos anteriores a ele</p>
+
+            <label for="txt1">Número</label>
+
+            <input type="text" id="numero">
+
+            <button onclick="botao_click()">Obter Primos</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var caixaTexto1 = document.getElementById("numero").value;
+
+            var numero1 = parseFloat(caixaTexto1);
+
+            var mensagem = "Os números Primos são: " + "\r";
+
+            for (var i = numero1; i >= 1; i--) {
+
+                var primo = true;
+
+                var numero2 = i - (i - 1);
+
+                for (var j = 2; j <= numero2; i++) {
+
+                    var resto = numero2 % j;
+
+                    if (resto == 0) {
+                        primo = false;
+                    }
+                    if (primo) {
+                        mensagem += numero + "\r";
+                    }
+
+                }
+
+            }
+
+            alert(mensagem);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
